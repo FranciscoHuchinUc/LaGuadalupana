@@ -1,4 +1,4 @@
-/* jshint esversion:6 */
+/* jshint esversion:8 */
 
 /*=============== SHOW MENU ===============*/
 const navMenu = document.getElementById("nav-menu"),
