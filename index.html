@@ -59,6 +59,7 @@
     <main>
         <section class="home grid" id="home">
             <div class="home__container">
+                <img src="./src/img/home.png" alt="" class="home__img">
                 <div class="home__content">
                     <h1 class="home__title">La Guadalupana</h1>
                     <p class="home__description">
@@ -77,7 +78,8 @@
                             <h2 class="home__data-number">250+</h2>
                             <h3 class="home__data-title">Productos</h3>
                             <p class="home__data-description">
-                                Pan de alta calidad y precio competitivo, para todos los gustos de los clientes de La Guadalupana.
+                                Pan de alta calidad y precio competitivo, para todos los gustos de los clientes de La
+                                Guadalupana.
                             </p>
                         </div>
                     </div>
@@ -85,8 +87,6 @@
                     <i class='bx bxs-mouse home__scroll'></i>
                 </div>
             </div>
-
-            <img src="./src/img/home.jpg" alt="" class="home__img">
         </section>
 
         <section class="about section">
@@ -342,66 +342,66 @@
                 <div class="swiper-pagination"></div>
             </div>
         </section>
-    </main>
 
-    <section class="contact section container" id="contact">
-        <h2 class="section__title">Contactanos</h2>
+        <section class="contact section container" id="contact">
+            <h2 class="section__title">Contactanos</h2>
 
-        <div class="contact__container container grid">
-            <div class="contact__content">
-                <h3 class="contact__title">Llamanos</h3>
+            <div class="contact__container container grid">
+                <div class="contact__content">
+                    <h3 class="contact__title">Llamanos</h3>
 
-                <div class="contact__info">
-                    <div class="contact__card">
-                        <i class='bx bx-mail-send contact__card__icon'></i>
-                        <h3 class="contact__card__title">Email</h3>
-                        <span class="contact__card__data"> info@laguadalupana.com </span>
+                    <div class="contact__info">
+                        <div class="contact__card">
+                            <i class='bx bx-mail-send contact__card__icon'></i>
+                            <h3 class="contact__card__title">Email</h3>
+                            <span class="contact__card__data"> info@laguadalupana.com </span>
 
-                        <a href="mailto:info@laguadalupana.com" target="_blank" class="contact__button">
-                            Escribenos <i class='bx bxs-chevron-right contact__button__icon'></i>
-                        </a>
-                    </div>
-                    <div class="contact__card">
-                        <i class='bx bxl-whatsapp contact__card__icon'></i>
-                        <h3 class="contact__card__title">WhatsApp</h3>
-                        <span class="contact__card__data"> 9810000000 </span>
+                            <a href="mailto:info@laguadalupana.com" target="_blank" class="contact__button">
+                                Escribenos <i class='bx bxs-chevron-right contact__button__icon'></i>
+                            </a>
+                        </div>
+                        <div class="contact__card">
+                            <i class='bx bxl-whatsapp contact__card__icon'></i>
+                            <h3 class="contact__card__title">WhatsApp</h3>
+                            <span class="contact__card__data"> 9810000000 </span>
 
-                        <a href="https://walink.co/b846d5" target="_blank" class="contact__button">
-                            Escribenos <i class='bx bxs-chevron-right contact__button__icon'></i>
-                        </a>
+                            <a href="https://walink.co/b846d5" target="_blank" class="contact__button">
+                                Escribenos <i class='bx bxs-chevron-right contact__button__icon'></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
+
+                <div class="contact__content">
+                    <h3 class="contact__title"> Envianos Correo Directo </h3>
+
+                    <form action="https://formspree.io/f/mpzbdkvl" class="contact__form" method="POST" id="form">
+                        <div class="contact__form__div">
+                            <label for="" class="contact__form__tag">Nombre(s)</label>
+                            <input type="text" name="name" id="name" class="contact__form__input"
+                                placeholder="Ingrese su Nombre(s)" required>
+                        </div>
+
+                        <div class="contact__form__div">
+                            <label for="" class="contact__form__tag">Correo</label>
+                            <input type="text" name="email" id="email" class="contact__form__input"
+                                placeholder="Ingrese su Correo">
+                        </div>
+
+                        <div class="contact__form__div contact__form__area">
+                            <label for="" class="contact__form__tag">Mensaje</label>
+                            <textarea name="message" id="menssage" cols="30" rows="10" class="contact__form__input"
+                                placeholder="Ingrese su Mensaje" required></textarea>
+                        </div>
+
+                        <button type="submit" class="button" id="add">
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
             </div>
-
-            <div class="contact__content">
-                <h3 class="contact__title"> Envianos Correo Directo </h3>
-
-                <form action="https://formspree.io/f/mpzbdkvl" class="contact__form" method="POST" id="form">
-                    <div class="contact__form__div">
-                        <label for="" class="contact__form__tag">Nombre(s)</label>
-                        <input type="text" name="name" id="name" class="contact__form__input"
-                            placeholder="Ingrese su Nombre(s)" required>
-                    </div>
-
-                    <div class="contact__form__div">
-                        <label for="" class="contact__form__tag">Correo</label>
-                        <input type="text" name="email" id="email" class="contact__form__input"
-                            placeholder="Ingrese su Correo">
-                    </div>
-
-                    <div class="contact__form__div contact__form__area">
-                        <label for="" class="contact__form__tag">Mensaje</label>
-                        <textarea name="message" id="menssage" cols="30" rows="10" class="contact__form__input"
-                            placeholder="Ingrese su Mensaje" required></textarea>
-                    </div>
-
-                    <button type="submit" class="button" id="add">
-                        Enviar Mensaje
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="footer__container container">

@@ -1,16 +1,17 @@
 :root {
   --header-height: 3.5rem;
 
-  --hue-color: 22;
+  --hue-color: 17;
 
-  --first-color: hsl(var(--hue-color), 51%, 48%);
-  --first-color-alt: hsl(var(--hue-color), 51%, 44%);
+  --first-color: hsl(var(--hue-color), 100%, 50%);
+  --first-color-alt: hsl(var(--hue-color), 100%, 44%);
+  --secondary-color: #020B2C;
   --black-color: hsl(206, 12%, 12%);
   --card-color: hsl(0, 0%, 90%);
   --title-color: hsl(206, 12%, 12%);
   --text-color: hsl(206, 4%, 42%);
   --text-color-light: hsl(206, 4%, 75%);
-  --body-color: hsl(206, 4%, 97%);
+  --body-color: #fff;
   --container-color: #fff;
 
   --body-font: "Poppins", sans-serif;
@@ -132,7 +133,7 @@ button {
 /*=============== HEADER & NAV BAR ===============*/
 .header {
   width: 100%;
-  background: transparent;
+  background: var(--body-color);
   position: fixed;
   top: 0;
   left: 0;
@@ -148,7 +149,7 @@ button {
 
 .nav__logo,
 .nav__toggle {
-  color: #fff;
+  color: var(--secondary-color);
 }
 
 .nav__logo {
@@ -160,7 +161,7 @@ button {
 
 .nav__logo__text {
   font-size: var(--normal-font-size);
-  color: #fff;
+  color: var(--first-color);
 }
 
 .nav__toggle {
@@ -172,7 +173,7 @@ button {
 @media screen and (max-width: 767px) {
   .nav__menu {
     position: fixed;
-    background-color: var(--black-color);
+    background-color: var(--body-color);
     top: 0;
     right: -100%;
     width: 100%;
@@ -191,13 +192,13 @@ button {
 
 .nav__link {
   text-transform: uppercase;
-  color: var(--text-color-light);
+  color: var(--secondary-color);
   font-size: var(--h2-font-size);
   transition: 0.3s;
 }
 
 .nav__link:hover {
-  color: #fff;
+  color: var(--first-color);
 }
 
 .nav__close {
@@ -205,7 +206,7 @@ button {
   top: 1rem;
   right: 1rem;
   font-size: 2rem;
-  color: #fff;
+  color: var(--secondary-color);
   cursor: pointer;
 }
 
@@ -224,21 +225,20 @@ button {
 }
 
 .active-link {
-  color: #fff;
+  color: var(--first-color);
 }
 
 /*=============== SECTIONS CSS ===============*/
 .home {
   gap: 0;
+  padding: 6rem 3rem;
 }
 
 .home__container {
-  padding: 7rem 2.5rem;
-  background: linear-gradient(
-    160deg,
-    hsl(206, 5%, 24%, 1) -4%,
-    hsl(206, 12%, 12%, 1) 46%
-  );
+  display: flex;
+  padding: 2rem 2rem;
+  background: #CBE7FE;
+  border-radius: .5rem;
 }
 
 .home__content {
@@ -247,7 +247,7 @@ button {
 
 .home__title,
 .home__data-title {
-  color: #fff;
+  color: var(--secondary-color);
 }
 
 .home__title {
@@ -291,11 +291,12 @@ button {
   margin: 0 auto;
   animation: scroll 3s infinite;
   text-align: center;
-  color: #fff;
+  color: var(--secondary-color);
 }
 
 .home__img {
-  width: 100%;
+  width: 50%;
+  height: 500px;
 }
 
 @keyframes scroll {
@@ -586,7 +587,7 @@ button {
 }
 
 .footer {
-  background-color: var(--black-color);
+  background-color: #020B2C;
   padding: 4rem 0 2.5rem;
 }
 
@@ -632,7 +633,7 @@ button {
   position: fixed;
   right: 1rem;
   bottom: -30%;
-  background-color: #FFF;
+  background-color: #b9b9b9;
   box-shadow: 0 4px 12px hsl(206, 4%, 20%, .2);
   display: inline-flex;
   padding: .35rem;
@@ -689,12 +690,39 @@ button {
     margin-left: 1rem;
     margin-right: 1rem;
   }
+  .home {
+    padding: 4rem 1rem;
+  }
   .home__container {
-    padding: 5rem 1.5rem;
+    padding: 0.5rem 1.5rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  .home__img {
+    width: 200px;
+    height: 200px;
+  }
+  .home__scroll {
+    bottom: 1rem;
+    font-size: var(--h1-font-size);
   }
 }
 
 @media screen and (min-width: 576px) {
+  .home__container {
+    align-items: center;
+  }
+  .home {
+    padding: 6rem 2rem;
+  }
+  .home__img {
+    width: 200px;
+    height: 200px;
+  }
+  .home__scroll {
+    text-align: justify;
+    bottom: 0;
+  }
   .services__category {
     grid-template-columns: repeat(2, 200px);
     column-gap: 3rem;
@@ -739,17 +767,6 @@ button {
     font-size: var(--normal-font-size);
     text-transform: initial;
   }
-  .nav__link::after {
-    content: '';
-    position: absolute;
-    width: 1px;
-    height: 12px;
-    background-color: var(--text-color-light);
-    transform: translateX(1.25rem);
-    top: 0;
-    bottom: 0;
-    margin: auto 0;
-  }
   .scroll-header .nav__link {
     color: var(--text-color);
   }
@@ -760,7 +777,6 @@ button {
     color: var(--first-color);
   }
   .home {
-    grid-template-columns: repeat(2, 1fr);
     align-items: stretch;
     position: relative;
   }
@@ -768,8 +784,9 @@ button {
     position: initial;
   }
   .home__scroll {
-    bottom: 10rem;
+    bottom: 8rem;
     margin: auto;
+    text-align: center;
   }
   .about__content,
   .footer__content {
@@ -795,6 +812,10 @@ button {
     max-width: 400px;
     margin-right: 7rem;
     margin-left: auto;
+  }
+  .home__img {
+    width: 50%;
+    height: auto;
   }
   .about__content {
     column-gap: 6rem;
@@ -881,7 +902,7 @@ button {
 
 @media screen and (min-width: 1200px) {
   .home__container {
-    padding-top: 10rem;
+    padding-top: 2rem;
   }
   .home__data {
     padding-top: 3rem;
