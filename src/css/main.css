@@ -1,11 +1,12 @@
 :root {
   --header-height: 3.5rem;
 
-  --hue-color: 17;
+  --hue-color: 29;
 
-  --first-color: hsl(var(--hue-color), 100%, 50%);
-  --first-color-alt: hsl(var(--hue-color), 100%, 44%);
+  --first-color: hsl(var(--hue-color), 92%, 45%);
+  --first-color-alt: hsl(var(--hue-color), 92%, 34%);
   --secondary-color: #020B2C;
+  --tertiary-color: hsl(29deg 96% 90%);
   --black-color: hsl(206, 12%, 12%);
   --card-color: hsl(0, 0%, 90%);
   --title-color: hsl(206, 12%, 12%);
@@ -128,6 +129,12 @@ button {
   border-radius: 0.25rem;
   font-size: var(--normal-font-size);
   text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.button:hover{
+  background-color: var(--first-color-alt);
+  color: #fff;
 }
 
 /*=============== HEADER & NAV BAR ===============*/
@@ -162,6 +169,12 @@ button {
 .nav__logo__text {
   font-size: var(--normal-font-size);
   color: var(--first-color);
+}
+
+.nav__logo__img {
+  width: 4rem;
+  height: 4rem;
+  margin-right: 0.5rem;
 }
 
 .nav__toggle {
@@ -227,7 +240,7 @@ button {
 .home__container {
   display: flex;
   padding: 2rem 2rem;
-  background: #CBE7FE;
+  background: var(--tertiary-color);
   border-radius: .5rem;
 }
 
@@ -658,7 +671,11 @@ button {
 }
 
 .load__gif {
-  width: 180px;
+  width: 100%;
+  max-width: 330px;
+  height: 100%;
+  max-height: 350px;
+  animation: scroll 2s infinite;
 }
 
 ::-webkit-scrollbar {
@@ -698,7 +715,7 @@ button {
   }
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 560px) {
   .home__container {
     align-items: center;
   }
@@ -905,6 +922,9 @@ button {
   }
   .products__line::before {
     right: -2rem;
+  }
+  .services__line::before {
+    right: -4rem;
   }
 }
 
