@@ -464,6 +464,7 @@ button {
   padding: 1.25rem 1.5rem;
   border-radius: .5rem;
   margin-bottom: 3rem;
+  margin-top: 4rem;
 }
 
 .testimonial__img {
@@ -727,7 +728,8 @@ button {
     height: 200px;
   }
   .home__scroll {
-    text-align: justify;
+    font-size: 45px;
+    right: 10rem;
     bottom: 0;
   }
   .services__category {
@@ -792,6 +794,7 @@ button {
   }
   .home__scroll {
     bottom: 8rem;
+    right: 0;
     margin: auto;
     text-align: center;
   }
