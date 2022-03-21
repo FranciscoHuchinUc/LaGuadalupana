@@ -496,6 +496,13 @@ button {
   padding-bottom: 3rem;
 }
 
+.contact__map {
+  width: 500px;
+  height: 400px;
+  border: none;
+  border-radius: 5px;
+}
+
 .contact__title {
   text-align: center;
   font-size: var(--h3-font-size);
@@ -714,6 +721,10 @@ button {
     bottom: 1rem;
     font-size: var(--h1-font-size);
   }
+  .contact__map {
+    width: 300px;
+    height: 300px;
+  }
 }
 
 @media screen and (min-width: 560px) {
@@ -748,6 +759,11 @@ button {
   .contact__form {
     width: 360px;
     margin: 0 auto;
+  }
+  .contact__map {
+    width: 500px;
+    height: 300px;
+    margin: auto;
   }
   .footer__content {
     grid-template-columns: repeat(2, 1fr);
@@ -810,6 +826,11 @@ button {
     grid-template-columns: repeat(2, max-content);
     justify-content: center;
     column-gap: 3rem;
+  }
+  .contact__map {
+    width: 300px;
+    height: 400px;
+    margin: auto;
   }
 }
 
@@ -907,6 +928,11 @@ button {
   }
   .contact__container {
     column-gap: 6rem;
+  }
+  .contact__map {
+    width: 450px;
+    height: 400px;
+    margin: auto;
   }
 }
 
