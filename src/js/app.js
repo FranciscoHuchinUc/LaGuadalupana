@@ -114,7 +114,7 @@ const $form = document.querySelector("#form");
 $form.addEventListener("submit", handleSubmit);
 
 async function handleSubmit(e) {
-  event.preventDefault();
+  e.preventDefault();
   const form = new FormData(this);
   const response = await fetch(this.action, {
     method: this.method,
